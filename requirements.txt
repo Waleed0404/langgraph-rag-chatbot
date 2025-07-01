@@ -6,4 +6,4 @@ openai
 pypdf
 tiktoken
 python-dotenv
-langchain-community
+langchain-community==0.0.28
