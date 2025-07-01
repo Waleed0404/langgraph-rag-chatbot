@@ -3,7 +3,7 @@ import glob
 from typing import TypedDict
 
 from langchain_community.chat_models import ChatOpenAI
-
+import streamlit as st
 from langchain.document_loaders import PyPDFLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -19,7 +19,7 @@ import os
 
 load_dotenv()  # ✅ This loads .env variables into os.environ
 
-openai_api_key = os.getenv("OPENAI_API_KEY")  # ✅ Gets your key safely
+openai_api_key = st.secrets["openai_api_key"]
 
 
 
